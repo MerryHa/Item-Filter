@@ -92,6 +92,9 @@ body {
   border-radius: var(--size-border);
   margin-bottom: var(--base-space);
 }
+.item.hidden {
+  display: none;
+}
 .item__thumbnail {
   width: var(--size-thumbnail);
   height: var(--size-thumbnail);
