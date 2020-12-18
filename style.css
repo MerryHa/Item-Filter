@@ -28,6 +28,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
 }
 .logo {
   width: 70px;
@@ -92,7 +93,7 @@ body {
   border-radius: var(--size-border);
   margin-bottom: var(--base-space);
 }
-.item.hidden {
+.item.invisible {
   display: none;
 }
 .item__thumbnail {
