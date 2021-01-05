@@ -9,7 +9,11 @@
 
   /* size */
   --base-space: 8px;
+  --small-space: 4px;
+  --logo-size: 70px;
+  --big-logo-size: 90px;
   --size-button: 50px;
+  --mobile-size-button: 30px;
   --size-border: 4px;
   --size-thumbnail: 30px;
   --font-size: 14px;
@@ -31,8 +35,8 @@ body {
   overflow: hidden;
 }
 .logo {
-  width: 70px;
-  height: 70px;
+  width: var(--logo-size);
+  height: var(--logo-size);
 }
 .btn {
   background-color: transparent;
@@ -53,8 +57,8 @@ body {
   align-items: center;
 }
 .imgBtn {
+  padding-top: 7px;
   width: var(--size-button);
-  height: var(--size-button);
 }
 .colorBtn {
   padding: calc(var(--base-space) * 2);
@@ -72,7 +76,7 @@ body {
   background-color: var(--color-pink);
 }
 .items {
-  width: 60%;
+  width: 400px;
   height: 60%;
   list-style: none;
   padding-left: 0;
@@ -100,4 +104,22 @@ body {
   width: var(--size-thumbnail);
   height: var(--size-thumbnail);
   margin-right: var(--base-space);
+}
+@media screen and (max-width: 500px) {
+  .logo {
+    width: var(--big-logo-size);
+    height: var(--big-logo-size);
+  }
+  .items {
+    width: 70%;
+  }
+  .imgBtn {
+    width: var(--mobile-size-button);
+  }
+  .colorBtn {
+    padding: var(--base-space);
+    border-radius: var(--size-border);
+    margin-right: var(--small-space);
+    font-size: var(--font-size);
+  }
 }
