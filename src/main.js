@@ -10,10 +10,11 @@ loadItems()
 
 //Fetch the items from the JSON file
 function loadItems(){
-    return fetch('../data/data.json')
-        .then(response=>response.json())
+    return fetch('data/data.json')
+        .then(response=>response.json())//response object에 있는 json이란 api를 이용해서 response의 body를 json object로 변환
         .then(json=>json.items);
 }
+//fetch를 이용해 data를 받아온 후 받아온 데이터가 성공적이면 json으로 변환하고 json안에 있는 items를 리턴하게 됨
 
 const container=document.querySelector('.items');
 //Update the list with the given items
