@@ -1,6 +1,7 @@
 :root {
   /* color */
   --color-black: #3f454d;
+  --color-beige: rgb(240, 229, 207);
   --color-white: #ffffff;
   --color-blue: #3b88c3;
   --color-yellow: #fbbe28;
@@ -11,9 +12,8 @@
   --base-space: 8px;
   --small-space: 4px;
   --logo-size: 70px;
-  --big-logo-size: 90px;
   --size-button: 50px;
-  --mobile-size-button: 30px;
+  --mobile-size-button: 35px;
   --size-border: 4px;
   --size-thumbnail: 30px;
   --font-size: 14px;
@@ -35,26 +35,40 @@ body {
   overflow: hidden;
 }
 .logo {
+  display: flex;
+  align-items: center;
+}
+.logo__text {
+  font-family: 'Pacifico', cursive;
+  font-size: 50px;
+  color: var(--color-beige);
+  margin: 0 0 var(--base-space) 0;
+}
+.logo__img {
   width: var(--logo-size);
   height: var(--logo-size);
+  margin-right: var(--base-space);
 }
 .btn {
   background-color: transparent;
   border: none;
   outline: none;
+  padding: 0;
 }
-.logo,
+.logo__img,
 .btn {
   cursor: pointer;
   transition: transform var(--animation-duration) ease-in;
 }
-.logo:hover,
+.logo__img:hover,
 .btn:hover {
   transform: scale(1.07);
 }
 .buttons {
   display: flex;
+  width: 400px;
   align-items: center;
+  justify-content: space-between;
 }
 .imgBtn {
   padding-top: 7px;
@@ -63,7 +77,6 @@ body {
 .colorBtn {
   padding: calc(var(--base-space) * 2);
   border-radius: var(--size-border);
-  margin-right: var(--base-space);
   font-size: var(--font-size);
 }
 .blue {
@@ -103,21 +116,21 @@ body {
 .item__thumbnail {
   width: var(--size-thumbnail);
   height: var(--size-thumbnail);
-  margin-right: var(--base-space);
+  margin: 0 var(--base-space);
 }
 @media screen and (max-width: 500px) {
-  .logo {
-    width: var(--big-logo-size);
-    height: var(--big-logo-size);
+  .logo__text {
+    font-size: 40px;
   }
-  .items {
+  .items,
+  .buttons {
     width: 70%;
   }
   .imgBtn {
     width: var(--mobile-size-button);
   }
   .colorBtn {
-    padding: var(--base-space);
+    padding: var(--base-space) calc(var(--base-space) * 1.5);
     border-radius: var(--size-border);
     margin-right: var(--small-space);
     font-size: var(--font-size);
