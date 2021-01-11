@@ -43,7 +43,6 @@ function setEventListeners(items){
 function onButtonClick(event, items){
      const key=event.target.dataset.key;
      const value=event.target.dataset.value;
-
      if(key==null||value==null){
          return;
      }
